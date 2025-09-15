@@ -23,7 +23,7 @@ public class TikTacToe {
         int move = 1;
         int player = 1;
         while (player == 1 || player == 2) {
-            if (move <= 9) {
+            if (move > 9) {
                 break;
             }
             if (player == 1) {
@@ -81,6 +81,9 @@ public class TikTacToe {
                     num = 2;
                     break;
                 }
+            }
+            if (move > 9) {
+                break;
             }
             if (player == 2) {
                 System.out.println("Player 2(O) turns(1-9):");
